@@ -1,0 +1,12 @@
+<?php
+echo "<pre>";
+function negrito (){
+	echo "<strong> Negrito</strong>";
+	
+
+}
+negrito ();
+function italico ($valor){
+	echo "<i>{$valor} </i>"
+}
+italico ("italico");
