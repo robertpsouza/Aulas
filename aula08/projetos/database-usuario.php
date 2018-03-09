@@ -21,3 +21,19 @@ function insereUsuario(array $usuario){
 
 			desconecta($con);
 }
+
+function listaUsuarioPorId($id){
+$con = conecta();
+$sql = "SELECT *FROM usuarios WHERE id ={$id}";
+$result = pg_query($con , $sql);
+$usuarios = pg_fetch_assoc($result);
+desconecta($con);
+return $usuarios;
+}
+
+function deletaUsuario($id){
+$con = conecta();
+$sql = "DELETE FROM usuarios WHERE id ={$id}";
+pg_query($con, $sql);
+desconecta($con);
+}

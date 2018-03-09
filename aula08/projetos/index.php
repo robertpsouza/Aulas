@@ -23,7 +23,15 @@
 	<tr>
 		<td><?php echo $user['id']; ?></td>	
 		<td><?php echo $user['usuario']; ?></td>	
-		<td></td>	
+		<td> <a href="edit.php?id=<?php echo $user['id']; ?>"
+			class="btn btn-info">Editar Usuario</a>	
+			<form action="delete.php"method= "POST">
+			<input type="hidden" name="id" value="<?php echo $user['id'];?>">
+			<input type="submit" class = "bnt bnt-danger"value="Deletar">
+			
+		</td>
+
+		<td> 	
 	</tr>	
 		<?php endforeach; ?>
 		<?php endif; ?>
